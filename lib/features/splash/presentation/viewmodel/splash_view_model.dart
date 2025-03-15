@@ -1,6 +1,6 @@
-import 'package:confrinho_app/app/routers/app_routers.dart';
-import 'package:confrinho_app/main.dart';
-import 'package:confrinho_app/shared/services/shared_preferences_service.dart';
+import 'package:cofrinho_app/app/routers/app_routers.dart';
+import 'package:cofrinho_app/main.dart';
+import 'package:cofrinho_app/shared/services/shared_preferences_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

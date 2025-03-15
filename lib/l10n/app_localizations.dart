@@ -4,6 +4,7 @@ class AppLocalizations {
   static const String toStart = 'Começar';
   static const String continueProcess = 'Continuar';
   static const String name = 'Nome';
+  static const String hello = 'Olá';
 
   // Welcome
   static const String welcomeTitle = 'Bem vindo ao';
@@ -14,4 +15,8 @@ class AppLocalizations {
   // Nome
   static const String nameTitle = 'Como gostaria de ser chamado?';
   static const String nameHint = 'Digite seu nome';
+
+  // New Cofrinho
+  static const String newCofrinhoMessage =
+      'Vamos criar nosso mais novo cofrinho';
 }
