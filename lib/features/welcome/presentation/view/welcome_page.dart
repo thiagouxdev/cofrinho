@@ -22,12 +22,36 @@ class _WelcomeViewState extends State<WelcomeView> {
         child: Column(
           children: [
             Expanded(
-              child: Hero(
-                tag: AppStringSvg.welcomeIllustration,
-                child: SvgPicture.asset(
-                  AppStringSvg.welcomeIllustration,
-                  width: AppSizes.illustrationLarge,
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Hero(
+                    tag: AppStringSvg.welcomeIllustration,
+                    child: SvgPicture.asset(
+                      AppStringSvg.welcomeIllustration,
+                      width: AppSizes.illustrationLarge,
+                    ),
+                  ),
+                  Column(
+                    children: [
+                      Text(AppLocalizations.welcomeTitle,
+                          style: Theme.of(context).textTheme.displaySmall),
+                      Text(
+                        AppLocalizations.appTitle,
+                        style:
+                            Theme.of(context).textTheme.displayMedium?.copyWith(
+                                  color: Theme.of(context).colorScheme.primary,
+                                ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: AppGaps.large),
+                  Text(
+                    textAlign: TextAlign.center,
+                    AppLocalizations.welcomeMessage,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ],
               ),
             ),
             Padding(
