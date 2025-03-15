@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
-
 import 'app_typography.dart';
 
 class AppTheme {
+  static const green = Colors.green;
+
   static ThemeData get lightTheme {
-    var themeData = ThemeData.light();
     return ThemeData(
-      brightness: Brightness.light,
-      textTheme: AppTypography.getTextTheme(themeData.textTheme),
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: green,
+        brightness: Brightness.light,
+      ),
+      textTheme: AppTypography.getTextTheme(ThemeData.light().textTheme),
     );
   }
 
   static ThemeData get darkTheme {
-    var themeData = ThemeData.dark();
-
     return ThemeData(
-      brightness: Brightness.dark,
-      textTheme: AppTypography.getTextTheme(themeData.textTheme),
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: green,
+        brightness: Brightness.dark,
+      ),
+      textTheme: AppTypography.getTextTheme(ThemeData.dark().textTheme),
     );
   }
 }

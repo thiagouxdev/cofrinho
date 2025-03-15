@@ -10,7 +10,7 @@ class SplashViewModel {
   final Ref ref;
 
   SplashViewModel(this.ref) {
-    navegarParaWelcome();
+    // navegarParaWelcome();
   }
 
   void navegarParaWelcome() {

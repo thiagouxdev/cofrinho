@@ -1,3 +1,4 @@
+import 'package:confrinho_app/shared/themes/app_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -11,7 +12,15 @@ class SplashView extends ConsumerWidget {
     ref.read(splashViewModelProvider);
     return const Scaffold(
       body: Center(
-        child: CircularProgressIndicator(),
+        child: Column(
+          children: [
+            Expanded(child: Placeholder()),
+            Padding(
+              padding: EdgeInsets.only(bottom: AppGaps.large),
+              child: CircularProgressIndicator(),
+            ),
+          ],
+        ),
       ),
     );
   }
