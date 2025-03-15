@@ -1,3 +1,4 @@
+import 'package:confrinho_app/features/cofrinho/presentation/view/new_cofrinho_view.dart';
 import 'package:confrinho_app/features/splash/presentation/view/splash_view.dart';
 import 'package:confrinho_app/features/welcome/presentation/view/nome_view.dart';
 import 'package:go_router/go_router.dart';
@@ -23,6 +24,10 @@ final goRouter = GoRouter(
     GoRoute(
       path: AppRoutes.nome,
       builder: (context, state) => const NomeView(),
+    ),
+    GoRoute(
+      path: AppRoutes.newCofrinho,
+      builder: (context, state) => const NewCofrinhoView(),
     ),
   ],
 );

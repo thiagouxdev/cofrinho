@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import '../../../../app/routers/app_routers.dart';
 import '../../../../l10n/app_localizations.dart';
@@ -15,9 +16,17 @@ class NomeView extends StatefulWidget {
 }
 
 class _NomeViewState extends State<NomeView> {
+  final nameController = TextEditingController();
+  final userBox = Hive.box('userBox');
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final nameController = TextEditingController();
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -60,7 +69,8 @@ class _NomeViewState extends State<NomeView> {
                     width: double.infinity,
                     child: CustomFilledButton(
                       onPressed: () {
-                        context.go(AppRoutes.nome);
+                        userBox.put('name', nameController.text);
+                        context.go(AppRoutes.newCofrinho);
                       },
                       child: const Text(AppLocalizations.continueProcess),
                     ),
