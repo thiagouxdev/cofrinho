@@ -10,11 +10,11 @@ class SplashViewModel {
   final Ref ref;
 
   SplashViewModel(this.ref) {
-    // navegarParaWelcome();
+    navegarParaWelcome();
   }
 
   void navegarParaWelcome() {
-    Future.delayed(const Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 2), () {
       ref.read(routerProvider).go(AppRoutes.welcome);
     });
   }

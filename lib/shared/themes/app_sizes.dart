@@ -4,4 +4,7 @@ class AppSizes {
   static const double illustrationSmall = 128.0;
   static const double illustrationMedium = 160.0;
   static const double illustrationLarge = 200.0;
+
+  // Tamanhos dos Botões
+  static const double buttonHeight = 52.0;
 }
