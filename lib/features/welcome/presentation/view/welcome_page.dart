@@ -14,7 +14,12 @@ class _WelcomeViewState extends State<WelcomeView> {
       appBar: AppBar(
         title: const Text('Welcome Page'),
       ),
-      body: Container(),
+      body: Center(
+        child: Text(
+          "Headline Small",
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      ),
     );
   }
 }
