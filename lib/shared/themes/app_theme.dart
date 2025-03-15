@@ -3,6 +3,7 @@ import 'app_typography.dart';
 
 class AppTheme {
   static const green = Colors.green;
+  static const double iconWeight = 500;
 
   static ThemeData get lightTheme {
     return ThemeData(
@@ -11,6 +12,9 @@ class AppTheme {
         brightness: Brightness.light,
       ),
       textTheme: AppTypography.getTextTheme(ThemeData.light().textTheme),
+      iconTheme: const IconThemeData(
+        weight: iconWeight,
+      ),
     );
   }
 
@@ -21,6 +25,9 @@ class AppTheme {
         brightness: Brightness.dark,
       ),
       textTheme: AppTypography.getTextTheme(ThemeData.dark().textTheme),
+      iconTheme: const IconThemeData(
+        weight: iconWeight,
+      ),
     );
   }
 }

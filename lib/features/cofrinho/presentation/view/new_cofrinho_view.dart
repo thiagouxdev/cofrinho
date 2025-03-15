@@ -2,6 +2,7 @@ import 'package:cofrinho_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../l10n/app_localizations.dart';
 import '../../../../shared/strings/app_string_svg.dart';
@@ -64,11 +65,19 @@ class NewCofrinhoViewState extends ConsumerState<NewCofrinhoView> {
                                 .colorScheme
                                 .surfaceContainerLow,
                             child: Icon(
-                              Icons.check,
+                              Symbols.check,
                               color: Theme.of(context).colorScheme.primary,
                             ),
                           ),
-                          title: Text(viewModel.listTitles[index]),
+                          title: Text(
+                            viewModel.listTitles[index],
+                            style:
+                                Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .onSurfaceVariant,
+                                    ),
+                          ),
                         );
                       },
                     );
@@ -168,10 +177,10 @@ class HeaderFeature extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const SizedBox(
-                    height: iconSize,
+                    height: AppGaps.extraLarge,
                   ),
                   Icon(
-                    Icons.school_outlined,
+                    Symbols.travel_luggage_and_bags_rounded,
                     size: iconSize,
                     color: iconColor,
                   ),
@@ -179,7 +188,7 @@ class HeaderFeature extends StatelessWidget {
                     height: iconSize,
                   ),
                   Icon(
-                    Icons.school_outlined,
+                    Symbols.tools_power_drill_rounded,
                     size: iconSize,
                     color: iconColor,
                   ),
@@ -192,7 +201,7 @@ class HeaderFeature extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(
-                    Icons.school_outlined,
+                    Symbols.featured_seasonal_and_gifts_rounded,
                     size: iconSize,
                     color: iconColor,
                   ),
@@ -200,7 +209,7 @@ class HeaderFeature extends StatelessWidget {
                     height: iconSize,
                   ),
                   Icon(
-                    Icons.school_outlined,
+                    Symbols.school_rounded,
                     size: iconSize,
                     color: iconColor,
                   ),
@@ -212,6 +221,14 @@ class HeaderFeature extends StatelessWidget {
             ],
           ),
         ),
+        Positioned(
+            top: 8,
+            left: 12,
+            child: IconButton.filledTonal(
+              onPressed: () {},
+              icon: Icon(Symbols.close_rounded,
+                  color: Theme.of(context).colorScheme.onSurface),
+            )),
         Positioned(
           bottom: 0,
           right: 0,
