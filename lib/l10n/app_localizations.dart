@@ -13,4 +13,5 @@ class AppLocalizations {
 
   // Nome
   static const String nameTitle = 'Como gostaria de ser chamado?';
+  static const String nameHint = 'Digite seu nome';
 }

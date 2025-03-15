@@ -17,6 +17,7 @@ class NomeView extends StatefulWidget {
 class _NomeViewState extends State<NomeView> {
   @override
   Widget build(BuildContext context) {
+    final nameController = TextEditingController();
     return Scaffold(
       body: CustomScrollView(
         slivers: [
@@ -37,10 +38,16 @@ class _NomeViewState extends State<NomeView> {
             hasScrollBody: false,
             child: Column(
               children: [
-                const Expanded(
+                Expanded(
                   child: Padding(
-                      padding: EdgeInsets.all(AppGaps.large),
-                      child: TextField()),
+                      padding: const EdgeInsets.all(AppGaps.large),
+                      child: TextField(
+                        autofocus: true,
+                        controller: nameController,
+                        decoration: const InputDecoration(
+                          labelText: AppLocalizations.nameHint,
+                        ),
+                      )),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(
