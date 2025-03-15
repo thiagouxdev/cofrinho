@@ -19,4 +19,10 @@ class AppLocalizations {
   // New Cofrinho
   static const String newCofrinhoMessage =
       'Vamos criar nosso mais novo cofrinho';
+  static const String selectYourGoal = 'Selecione seu objetivo';
+  static const String createYourPiggyBankName = 'Crie o nome do seu cofrinho';
+  static const String enterTheValueToReach = 'Informe o valor para alcançar';
+  static const String howMuchToAddPerMonth = 'Quanto vamos adicionar por mês';
+  static const String everythingReviewedLetsSave =
+      'Tudo revisado? Partiu economizar';
 }
