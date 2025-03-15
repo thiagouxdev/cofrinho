@@ -1,23 +1,22 @@
+import 'package:confrinho_app/features/welcome/presentation/viewmodel/nome_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
-import '../../../../app/routers/app_routers.dart';
 import '../../../../l10n/app_localizations.dart';
 import '../../../../shared/themes/app_gaps.dart';
 import '../../../../shared/themes/app_sizes.dart';
 import '../../../../shared/widgets/custom_filled_button.dart';
 
-class NomeView extends StatefulWidget {
+class NomeView extends ConsumerStatefulWidget {
   const NomeView({super.key});
 
   @override
-  State<NomeView> createState() => _NomeViewState();
+  NomeViewState createState() => NomeViewState();
 }
 
-class _NomeViewState extends State<NomeView> {
+class NomeViewState extends ConsumerState<NomeView> {
   final nameController = TextEditingController();
-  final userBox = Hive.box('userBox');
 
   @override
   void dispose() {
@@ -69,8 +68,10 @@ class _NomeViewState extends State<NomeView> {
                     width: double.infinity,
                     child: CustomFilledButton(
                       onPressed: () {
-                        userBox.put('name', nameController.text);
-                        context.go(AppRoutes.newCofrinho);
+                        ref
+                            .read(nomeViewModelProvider)
+                            .saveNameAndCompleteOnboarding(
+                                nameController.text, context);
                       },
                       child: const Text(AppLocalizations.continueProcess),
                     ),

@@ -7,27 +7,30 @@ import '../../features/home/presentation/view/home_view.dart';
 import '../../features/welcome/presentation/view/welcome_view.dart';
 import 'app_routers.dart';
 
+final List<RouteBase> appRoutes = [
+  GoRoute(
+    path: AppRoutes.splash,
+    builder: (context, state) => const SplashView(),
+  ),
+  GoRoute(
+    path: AppRoutes.welcome,
+    builder: (context, state) => const WelcomeView(),
+  ),
+  GoRoute(
+    path: AppRoutes.home,
+    builder: (context, state) => const HomeView(),
+  ),
+  GoRoute(
+    path: AppRoutes.nome,
+    builder: (context, state) => const NomeView(),
+  ),
+  GoRoute(
+    path: AppRoutes.newCofrinho,
+    builder: (context, state) => const NewCofrinhoView(),
+  ),
+];
+
 final goRouter = GoRouter(
-  routes: [
-    GoRoute(
-      path: AppRoutes.splash,
-      builder: (context, state) => const SplashView(),
-    ),
-    GoRoute(
-      path: AppRoutes.welcome,
-      builder: (context, state) => const WelcomeView(),
-    ),
-    GoRoute(
-      path: AppRoutes.home,
-      builder: (context, state) => const HomeView(),
-    ),
-    GoRoute(
-      path: AppRoutes.nome,
-      builder: (context, state) => const NomeView(),
-    ),
-    GoRoute(
-      path: AppRoutes.newCofrinho,
-      builder: (context, state) => const NewCofrinhoView(),
-    ),
-  ],
+  initialLocation: AppRoutes.splash,
+  routes: appRoutes,
 );

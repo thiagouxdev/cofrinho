@@ -1,3 +1,4 @@
+import 'package:confrinho_app/features/splash/presentation/viewmodel/splash_view_model.dart';
 import 'package:confrinho_app/shared/themes/app_gaps.dart';
 import 'package:confrinho_app/shared/themes/app_sizes.dart';
 import 'package:flutter/material.dart';
@@ -5,14 +6,27 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../shared/strings/app_string_svg.dart';
-import '../viewmodel/splash_view_model.dart';
 
-class SplashView extends ConsumerWidget {
+class SplashView extends ConsumerStatefulWidget {
   const SplashView({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    ref.read(splashViewModelProvider);
+  SplashViewState createState() => SplashViewState();
+}
+
+class SplashViewState extends ConsumerState<SplashView> {
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(
+        () => ref.read(splashViewModelProvider).navigateToNextScreen(context));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    ref.listen(splashViewModelProvider, (previous, next) {
+      if (next.state == SplashState.loaded) {}
+    });
     return Scaffold(
       body: Center(
         child: Column(

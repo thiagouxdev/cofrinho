@@ -1,27 +1,22 @@
-// main.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'app/routers/app_views.dart';
+import 'main.dart';
 import 'shared/themes/app_theme.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return ProviderScope(
-      child: Consumer(
-        builder: (context, ref, child) {
-          return MaterialApp.router(
-            routerConfig: goRouter,
-            title: 'Cofrinho',
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            themeMode: ThemeMode.system,
-            debugShowCheckedModeBanner: false,
-          );
-        },
-      ),
+  Widget build(BuildContext context, WidgetRef ref) {
+    final goRouter = ref.watch(goRouterProvider);
+
+    return MaterialApp.router(
+      routerConfig: goRouter,
+      title: 'Cofrinho',
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
