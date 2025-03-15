@@ -35,11 +35,11 @@ class _WelcomeViewState extends State<WelcomeView> {
                   Column(
                     children: [
                       Text(AppLocalizations.welcomeTitle,
-                          style: Theme.of(context).textTheme.displaySmall),
+                          style: Theme.of(context).textTheme.displayMedium),
                       Text(
                         AppLocalizations.appTitle,
                         style:
-                            Theme.of(context).textTheme.displayMedium?.copyWith(
+                            Theme.of(context).textTheme.displayLarge?.copyWith(
                                   color: Theme.of(context).colorScheme.primary,
                                 ),
                       ),
