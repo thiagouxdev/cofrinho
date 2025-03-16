@@ -66,7 +66,17 @@ class SelectGoalView extends ConsumerWidget {
             left: 0,
             right: 0,
             child: Container(
-              color: Theme.of(context).scaffoldBackgroundColor,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Theme.of(context).scaffoldBackgroundColor.withOpacity(0.0),
+                    Theme.of(context).scaffoldBackgroundColor,
+                  ],
+                  stops: const [0.0, 1.0],
+                ),
+              ),
               padding: const EdgeInsets.only(
                 top: AppGaps.large,
                 right: AppGaps.large,
