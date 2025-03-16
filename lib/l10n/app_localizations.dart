@@ -5,6 +5,8 @@ class AppLocalizations {
   static const String continueProcess = 'Continuar';
   static const String name = 'Nome';
   static const String hello = 'Olá';
+  static const String value = 'Valor';
+  static const String save = 'Salvar';
 
   // Welcome
   static const String welcomeTitle = 'Bem vindo ao';
@@ -26,8 +28,8 @@ class AppLocalizations {
   static const String everythingReviewedLetsSave =
       'Tudo revisado? Partiu economizar';
 
-  // Objetivos
-  static const String objectiveCofrinho =
+  // Cofrinho
+  static const String goalCofrinho =
       'Qual é o seu objetivo para esse cofrinho?';
   static const String goalTravel = 'Viagem';
   static const String goalCar = 'Carro';
@@ -40,4 +42,10 @@ class AppLocalizations {
   static const String goalGift = 'Presente';
   static const String goalSaveMoney = 'Economizar';
   static const String goalCongratulation = 'Comemoração';
+  static const String nameCofrinho = 'Crie um nome para seu cofrinho';
+  static const String valueToReach = 'Qual valor deseja alcançar?';
+  static const String enterInitialAmount = 'Deseja adicionar um valor inicial?';
+
+  static const String enterAmount = 'Qual o valor inicial?';
+  static const String enterMonthlySaving = 'Quanto você pode guardar por mês?';
 }
