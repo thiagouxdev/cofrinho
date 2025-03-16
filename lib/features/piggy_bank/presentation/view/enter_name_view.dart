@@ -1,4 +1,4 @@
-import 'package:piggy_bank_app/l10n/app_localizations.dart';
+import 'package:cofrinho_app/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class EnterNameView extends StatefulWidget {
@@ -15,7 +15,7 @@ class _EnterNameViewState extends State<EnterNameView> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar.medium(
-            title: Text(AppLocalizations.namePiggyBank),
+            title: Text(AppLocalizations.nameCofrinho),
           ),
           SliverToBoxAdapter(
             child: Placeholder(),

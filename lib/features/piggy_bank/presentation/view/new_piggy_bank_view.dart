@@ -1,4 +1,4 @@
-import 'package:piggy_bank_app/app/routers/app_routers.dart';
+import 'package:cofrinho_app/app/routers/app_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -127,7 +127,7 @@ class titleFeature extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: Text(
-              AppLocalizations.newPiggyBankMessage,
+              AppLocalizations.newCofrinhoMessage,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),

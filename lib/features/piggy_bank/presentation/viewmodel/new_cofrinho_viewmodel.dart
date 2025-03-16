@@ -1,5 +1,5 @@
-import 'package:piggy_bank_app/main.dart';
-import 'package:piggy_bank_app/shared/services/hive_service.dart';
+import 'package:cofrinho_app/main.dart';
+import 'package:cofrinho_app/shared/services/hive_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

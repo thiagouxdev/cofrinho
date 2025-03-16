@@ -1,6 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_symbols_icons/symbols.dart';
-import 'package:piggy_bank_app/l10n/app_localizations.dart';
+import 'package:cofrinho_app/l10n/app_localizations.dart';
 
 final selectGoalViewModelProvider = Provider((ref) => SelectGoalViewModel(ref));
 final selectedGoalProvider = StateProvider<int?>((ref) => null);
