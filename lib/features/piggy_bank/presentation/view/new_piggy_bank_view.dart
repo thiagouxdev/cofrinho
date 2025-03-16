@@ -10,26 +10,26 @@ import '../../../../shared/strings/app_string_svg.dart';
 import '../../../../shared/themes/app_gaps.dart';
 import '../../../../shared/themes/app_sizes.dart';
 import '../../../../shared/widgets/custom_filled_button.dart';
-import '../viewmodel/new_cofrinho_viewmodel.dart';
+import '../viewmodel/new_piggy_bank_viewmodel.dart';
 
-class NewCofrinhoView extends ConsumerStatefulWidget {
-  const NewCofrinhoView({super.key});
+class NewPiggyBankView extends ConsumerStatefulWidget {
+  const NewPiggyBankView({super.key});
 
   @override
-  NewCofrinhoViewState createState() => NewCofrinhoViewState();
+  PiggyBankViewState createState() => PiggyBankViewState();
 }
 
-class NewCofrinhoViewState extends ConsumerState<NewCofrinhoView> {
+class PiggyBankViewState extends ConsumerState<NewPiggyBankView> {
   @override
   void initState() {
     super.initState();
     Future.microtask(
-        () => ref.read(newCofrinhoViewModelProvider).getUserName());
+        () => ref.read(newPiggyBankViewModelProvider).getUserName());
   }
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = ref.watch(newCofrinhoViewModelProvider);
+    final viewModel = ref.watch(newPiggyBankViewModelProvider);
 
     return Scaffold(
       body: Column(
@@ -103,7 +103,7 @@ class titleFeature extends StatelessWidget {
     required this.viewModel,
   });
 
-  final NewCofrinhoViewModel viewModel;
+  final NewPiggyBankViewModel viewModel;
 
   @override
   Widget build(BuildContext context) {

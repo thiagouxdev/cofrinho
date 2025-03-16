@@ -3,16 +3,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:piggy_bank_app/shared/services/hive_service.dart';
 import 'package:piggy_bank_app/features/piggy_bank/domain/models/cofrinho_model.dart';
 
-final cofrinhoViewModelProvider =
-    StateNotifierProvider<CofrinhoViewModel, List<CofrinhoModel>>((ref) {
+final piggyBankViewModelProvider =
+    StateNotifierProvider<PiggyBankViewModel, List<CofrinhoModel>>((ref) {
   final hiveService = ref.watch(hiveServiceProvider);
-  return CofrinhoViewModel(hiveService);
+  return PiggyBankViewModel(hiveService);
 });
 
-class CofrinhoViewModel extends StateNotifier<List<CofrinhoModel>> {
+class PiggyBankViewModel extends StateNotifier<List<CofrinhoModel>> {
   final HiveService _hiveService;
 
-  CofrinhoViewModel(this._hiveService) : super([]) {
+  PiggyBankViewModel(this._hiveService) : super([]) {
     _loadCofrinhos();
   }
 

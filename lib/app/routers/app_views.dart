@@ -1,4 +1,4 @@
-import 'package:piggy_bank_app/features/piggy_bank/presentation/view/new_cofrinho_view.dart';
+import 'package:piggy_bank_app/features/piggy_bank/presentation/view/new_piggy_bank_view.dart';
 import 'package:piggy_bank_app/features/splash/presentation/view/splash_view.dart';
 import 'package:piggy_bank_app/features/welcome/presentation/view/nome_view.dart';
 import 'package:go_router/go_router.dart';
@@ -27,7 +27,7 @@ final List<RouteBase> appRoutes = [
   ),
   GoRoute(
     path: AppRoutes.newCofrinho,
-    builder: (context, state) => const NewCofrinhoView(),
+    builder: (context, state) => const NewPiggyBankView(),
   ),
   GoRoute(
     path: AppRoutes.objective,
