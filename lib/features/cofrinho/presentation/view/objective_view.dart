@@ -18,7 +18,7 @@ class _ObjectiveViewState extends State<ObjectiveView> {
             title: Text(
               AppLocalizations.objectiveCofrinho,
             ),
-          )
+          ),
         ],
       ),
     );

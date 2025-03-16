@@ -10,7 +10,7 @@ import '../../../../shared/strings/app_string_svg.dart';
 import '../../../../shared/themes/app_gaps.dart';
 import '../../../../shared/themes/app_sizes.dart';
 import '../../../../shared/widgets/custom_filled_button.dart';
-import '../viewmodel/new_cofrinho_view_model.dart';
+import '../viewmodel/new_cofrinho_viewmodel.dart';
 
 class NewCofrinhoView extends ConsumerStatefulWidget {
   const NewCofrinhoView({super.key});

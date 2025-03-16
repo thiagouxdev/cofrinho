@@ -1,4 +1,4 @@
-import 'package:cofrinho_app/features/splash/presentation/viewmodel/splash_view_model.dart';
+import 'package:cofrinho_app/features/splash/presentation/viewmodel/splash_viewmodel.dart';
 import 'package:cofrinho_app/shared/themes/app_gaps.dart';
 import 'package:cofrinho_app/shared/themes/app_sizes.dart';
 import 'package:flutter/material.dart';
