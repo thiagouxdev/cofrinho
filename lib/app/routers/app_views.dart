@@ -3,7 +3,7 @@ import 'package:cofrinho_app/features/splash/presentation/view/splash_view.dart'
 import 'package:cofrinho_app/features/welcome/presentation/view/nome_view.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/cofrinho/presentation/view/objective_view.dart';
+import '../../features/cofrinho/presentation/view/select_goal_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/welcome/presentation/view/welcome_view.dart';
 import 'app_routers.dart';
@@ -31,7 +31,7 @@ final List<RouteBase> appRoutes = [
   ),
   GoRoute(
     path: AppRoutes.objective,
-    builder: (context, state) => const ObjectiveView(),
+    builder: (context, state) => const SelectGoalView(),
   ),
 ];
 

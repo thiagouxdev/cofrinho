@@ -1,14 +1,14 @@
 import 'package:cofrinho_app/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
-class ObjectiveView extends StatefulWidget {
-  const ObjectiveView({super.key});
+class SelectGoalView extends StatefulWidget {
+  const SelectGoalView({super.key});
 
   @override
-  State<ObjectiveView> createState() => _ObjectiveViewState();
+  State<SelectGoalView> createState() => _SelectGoalViewState();
 }
 
-class _ObjectiveViewState extends State<ObjectiveView> {
+class _SelectGoalViewState extends State<SelectGoalView> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -16,7 +16,7 @@ class _ObjectiveViewState extends State<ObjectiveView> {
         slivers: [
           SliverAppBar.medium(
             title: Text(
-              AppLocalizations.objectiveCofrinho,
+              AppLocalizations.goalCofrinho,
             ),
           ),
         ],
