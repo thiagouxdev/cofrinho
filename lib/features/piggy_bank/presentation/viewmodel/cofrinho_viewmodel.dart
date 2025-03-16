@@ -1,7 +1,7 @@
 import 'package:piggy_bank_app/main.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:piggy_bank_app/shared/services/hive_service.dart';
-import 'package:piggy_bank_app/features/cofrinho/domain/models/cofrinho_model.dart';
+import 'package:piggy_bank_app/features/piggy_bank/domain/models/cofrinho_model.dart';
 
 final cofrinhoViewModelProvider =
     StateNotifierProvider<CofrinhoViewModel, List<CofrinhoModel>>((ref) {

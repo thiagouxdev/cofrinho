@@ -5,14 +5,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../l10n/app_localizations.dart';
 
-enum NewPiggyBankState { initial, loading, loaded }
+enum NewCofrinhoState { initial, loading, loaded }
 
-class NewPiggyBankViewModel extends ChangeNotifier {
+class NewCofrinhoViewModel extends ChangeNotifier {
   final HiveService _hiveService;
   String? _userName;
   String? get userName => _userName;
-  NewPiggyBankState _state = NewPiggyBankState.initial;
-  NewPiggyBankState get state => _state;
+  NewCofrinhoState _state = NewCofrinhoState.initial;
+  NewCofrinhoState get state => _state;
   final List<String> _listTitles = [
     AppLocalizations.selectYourGoal,
     AppLocalizations.createYourPiggyBankName,
@@ -22,13 +22,13 @@ class NewPiggyBankViewModel extends ChangeNotifier {
   ];
   List<String> get listTitles => _listTitles;
 
-  NewPiggyBankViewModel(this._hiveService);
+  NewCofrinhoViewModel(this._hiveService);
 
   Future<void> getUserName() async {
-    _state = NewPiggyBankState.loading;
+    _state = NewCofrinhoState.loading;
     notifyListeners();
     _userName = _hiveService.getData(HiveService.userBoxName, 'name');
-    _state = NewPiggyBankState.loaded;
+    _state = NewCofrinhoState.loaded;
     notifyListeners();
   }
 
@@ -38,5 +38,5 @@ class NewPiggyBankViewModel extends ChangeNotifier {
   }
 }
 
-final NewPiggyBankViewModelProvider = ChangeNotifierProvider(
-    (ref) => NewPiggyBankViewModel(ref.read(hiveServiceProvider)));
+final newCofrinhoViewModelProvider = ChangeNotifierProvider(
+    (ref) => NewCofrinhoViewModel(ref.read(hiveServiceProvider)));

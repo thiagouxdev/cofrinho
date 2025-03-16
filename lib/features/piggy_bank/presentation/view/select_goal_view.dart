@@ -28,17 +28,13 @@ class SelectGoalView extends ConsumerWidget {
                 pinned: true,
               ),
               SliverPadding(
-                padding: const EdgeInsets.only(
-                  right: AppGaps.large,
-                  bottom: AppGaps.large,
-                  left: AppGaps.large,
-                ),
+                padding: const EdgeInsets.all(AppGaps.large),
                 sliver: SliverGrid(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 12,
                     crossAxisSpacing: 12,
-                    mainAxisExtent: 104,
+                    mainAxisExtent: 100,
                   ),
                   delegate: SliverChildBuilderDelegate(
                     (context, index) {

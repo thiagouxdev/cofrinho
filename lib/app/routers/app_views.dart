@@ -1,9 +1,9 @@
-import 'package:piggy_bank_app/features/cofrinho/presentation/view/new_cofrinho_view.dart';
+import 'package:piggy_bank_app/features/piggy_bank/presentation/view/new_cofrinho_view.dart';
 import 'package:piggy_bank_app/features/splash/presentation/view/splash_view.dart';
 import 'package:piggy_bank_app/features/welcome/presentation/view/nome_view.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/cofrinho/presentation/view/select_goal_view.dart';
+import '../../features/piggy_bank/presentation/view/select_goal_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/welcome/presentation/view/welcome_view.dart';
 import 'app_routers.dart';
