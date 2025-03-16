@@ -41,11 +41,11 @@ class SelectGoalView extends ConsumerWidget {
                       final goal = viewModel.goals[index];
                       final isSelected = viewModel.selectedGoalIndex == index;
 
-                      return GestureDetector(
+                      return StackedCardWidget(
                         key: ValueKey(index),
+                        isSelected: isSelected,
+                        goal: goal,
                         onTap: () => viewModel.selectGoal(index),
-                        child: StackedCardWidget(
-                            isSelected: isSelected, goal: goal),
                       );
                     },
                     childCount: viewModel.goals.length,
@@ -54,9 +54,10 @@ class SelectGoalView extends ConsumerWidget {
               ),
               const SliverToBoxAdapter(
                 child: SizedBox(
-                    height: AppSizes.buttonHeight +
-                        AppGaps.extraLarge +
-                        AppGaps.large),
+                  height: AppSizes.buttonHeight +
+                      AppGaps.extraLarge +
+                      AppGaps.large,
+                ),
               ),
             ],
           ),
