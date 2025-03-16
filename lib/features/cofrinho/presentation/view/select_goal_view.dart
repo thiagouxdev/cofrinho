@@ -1,48 +1,19 @@
 import 'package:cofrinho_app/l10n/app_localizations.dart';
-import 'package:cofrinho_app/shared/themes/app_corners.dart';
 import 'package:cofrinho_app/shared/themes/app_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../shared/themes/app_sizes.dart';
 import '../../../../shared/widgets/custom_filled_button.dart';
-
-final selectedGoalProvider = StateProvider<int?>((ref) => null);
+import '../viewmodel/select_goal_viewmodel.dart';
+import 'widgets/stacked_card_widget.dart';
 
 class SelectGoalView extends ConsumerWidget {
   const SelectGoalView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final selectedGoalIndex = ref.watch(selectedGoalProvider);
-    final List<Map<String, dynamic>> goals = [
-      {
-        'icon': Symbols.travel_luggage_and_bags_rounded,
-        'label': AppLocalizations.goalTravel
-      },
-      {'icon': Symbols.directions_car, 'label': AppLocalizations.goalCar},
-      {
-        'icon': Symbols.two_wheeler_rounded,
-        'label': AppLocalizations.goalMotorcycle
-      },
-      {'icon': Symbols.smartphone_rounded, 'label': AppLocalizations.goalPhone},
-      {'icon': Symbols.home, 'label': AppLocalizations.goalHouse},
-      {'icon': Symbols.school, 'label': AppLocalizations.goalCourse},
-      {
-        'icon': Symbols.tools_power_drill_rounded,
-        'label': AppLocalizations.goalRenovation
-      },
-      {
-        'icon': Symbols.stethoscope_rounded,
-        'label': AppLocalizations.goalMedical
-      },
-      {
-        'icon': Symbols.featured_seasonal_and_gifts_rounded,
-        'label': AppLocalizations.goalGift
-      },
-      {'icon': Symbols.savings, 'label': AppLocalizations.goalSaveMoney},
-    ];
+    final viewModel = ref.watch(selectGoalViewModelProvider);
 
     return Scaffold(
       body: Stack(
@@ -67,18 +38,17 @@ class SelectGoalView extends ConsumerWidget {
                   ),
                   delegate: SliverChildBuilderDelegate(
                     (context, index) {
-                      final goal = goals[index];
-                      final isSelected = selectedGoalIndex == index;
+                      final goal = viewModel.goals[index];
+                      final isSelected = viewModel.selectedGoalIndex == index;
 
                       return GestureDetector(
                         key: ValueKey(index),
-                        onTap: () {
-                          ref.read(selectedGoalProvider.notifier).state = index;
-                        },
-                        child: StackedCard(isSelected: isSelected, goal: goal),
+                        onTap: () => viewModel.selectGoal(index),
+                        child: StackedCardWidget(
+                            isSelected: isSelected, goal: goal),
                       );
                     },
-                    childCount: goals.length,
+                    childCount: viewModel.goals.length,
                   ),
                 ),
               ),
@@ -106,67 +76,13 @@ class SelectGoalView extends ConsumerWidget {
                 height: AppSizes.buttonHeight,
                 width: double.infinity,
                 child: CustomFilledButton(
-                  onPressed: selectedGoalIndex != null ? () {} : null,
+                  onPressed: viewModel.isGoalSelected
+                      ? viewModel.continueProcess
+                      : null,
                   child: const Text(AppLocalizations.continueProcess),
                 ),
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class StackedCard extends StatelessWidget {
-  const StackedCard({
-    super.key,
-    required this.isSelected,
-    required this.goal,
-  });
-
-  final bool isSelected;
-  final Map<String, dynamic> goal;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        vertical: AppGaps.medium,
-        horizontal: AppGaps.large,
-      ),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainer,
-        borderRadius: BorderRadius.circular(AppCorners.large),
-        border: isSelected
-            ? Border.all(
-                color: Theme.of(context).colorScheme.primary,
-                width: 3,
-                strokeAlign: BorderSide.strokeAlignOutside,
-              )
-            : null,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          CircleAvatar(
-            backgroundColor: isSelected
-                ? Theme.of(context).colorScheme.primary
-                : Theme.of(context).colorScheme.surfaceContainerHighest,
-            child: Icon(
-              goal['icon'],
-              color: isSelected
-                  ? Theme.of(context).colorScheme.onPrimary
-                  : Theme.of(context).colorScheme.onSurfaceVariant,
-              fill: isSelected ? 1.0 : 0.0,
-            ),
-          ),
-          Text(
-            goal['label'],
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: Theme.of(context).textTheme.titleMedium,
           ),
         ],
       ),
