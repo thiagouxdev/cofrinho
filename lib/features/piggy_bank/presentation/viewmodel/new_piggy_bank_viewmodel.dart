@@ -13,6 +13,7 @@ class NewPiggyBankViewModel extends ChangeNotifier {
   String? get userName => _userName;
   NewPiggyBankState _state = NewPiggyBankState.initial;
   NewPiggyBankState get state => _state;
+
   final List<String> _listTitles = [
     AppLocalizations.selectYourGoal,
     AppLocalizations.createYourPiggyBankName,
