@@ -21,7 +21,9 @@ class StackedCardWidget extends StatelessWidget {
         horizontal: AppGaps.large,
       ),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surfaceContainer,
+        color: isSelected
+            ? Theme.of(context).colorScheme.surface
+            : Theme.of(context).colorScheme.surfaceContainer,
         borderRadius: BorderRadius.circular(AppCorners.large),
         border: isSelected
             ? Border.all(

@@ -23,7 +23,10 @@ class SelectGoalViewModel {
           'icon': Symbols.travel_luggage_and_bags_rounded,
           'label': AppLocalizations.goalTravel
         },
-        {'icon': Symbols.directions_car, 'label': AppLocalizations.goalCar},
+        {
+          'icon': Symbols.directions_car_rounded,
+          'label': AppLocalizations.goalCar
+        },
         {
           'icon': Symbols.two_wheeler_rounded,
           'label': AppLocalizations.goalMotorcycle
@@ -32,8 +35,8 @@ class SelectGoalViewModel {
           'icon': Symbols.smartphone_rounded,
           'label': AppLocalizations.goalPhone
         },
-        {'icon': Symbols.home, 'label': AppLocalizations.goalHouse},
-        {'icon': Symbols.school, 'label': AppLocalizations.goalCourse},
+        {'icon': Symbols.home_rounded, 'label': AppLocalizations.goalHouse},
+        {'icon': Symbols.school_rounded, 'label': AppLocalizations.goalCourse},
         {
           'icon': Symbols.tools_power_drill_rounded,
           'label': AppLocalizations.goalRenovation
@@ -46,7 +49,10 @@ class SelectGoalViewModel {
           'icon': Symbols.featured_seasonal_and_gifts_rounded,
           'label': AppLocalizations.goalGift
         },
-        {'icon': Symbols.savings, 'label': AppLocalizations.goalSaveMoney},
+        {
+          'icon': Symbols.savings_rounded,
+          'label': AppLocalizations.goalSaveMoney
+        },
       ];
 
   void continueProcess() {
