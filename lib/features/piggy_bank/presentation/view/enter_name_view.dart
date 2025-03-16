@@ -1,4 +1,4 @@
-import 'package:cofrinho_app/l10n/app_localizations.dart';
+import 'package:piggy_bank_app/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class EnterNameView extends StatefulWidget {

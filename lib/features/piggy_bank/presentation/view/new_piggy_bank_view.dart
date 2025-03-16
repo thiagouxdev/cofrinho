@@ -1,4 +1,4 @@
-import 'package:cofrinho_app/app/routers/app_routers.dart';
+import 'package:piggy_bank_app/app/routers/app_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';

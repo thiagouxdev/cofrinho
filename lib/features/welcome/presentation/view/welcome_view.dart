@@ -1,6 +1,6 @@
-import 'package:cofrinho_app/app/routers/app_routers.dart';
-import 'package:cofrinho_app/l10n/app_localizations.dart';
-import 'package:cofrinho_app/shared/themes/app_gaps.dart';
+import 'package:piggy_bank_app/app/routers/app_routers.dart';
+import 'package:piggy_bank_app/l10n/app_localizations.dart';
+import 'package:piggy_bank_app/shared/themes/app_gaps.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';

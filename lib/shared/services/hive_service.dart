@@ -1,5 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:cofrinho_app/features/cofrinho/domain/models/cofrinho_model.dart';
+import 'package:piggy_bank_app/features/cofrinho/domain/models/cofrinho_model.dart';
 
 class HiveService {
   static const String userBoxName =

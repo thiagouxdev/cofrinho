@@ -1,4 +1,4 @@
-import 'package:cofrinho_app/features/welcome/presentation/viewmodel/nome_view_model.dart';
+import 'package:piggy_bank_app/features/welcome/presentation/viewmodel/nome_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
