@@ -10,8 +10,6 @@ class HiveService {
   /// ✅ Inicializa o Hive e registra os adapters
   Future<void> init() async {
     await Hive.initFlutter();
-    Hive.registerAdapter(
-        CofrinhoModelAdapter()); // ✅ Registra o adapter do modelo Cofrinho
     await openBoxes(); // ✅ Abre as caixas do Hive
   }
 
