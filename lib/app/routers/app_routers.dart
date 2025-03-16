@@ -5,4 +5,5 @@ class AppRoutes {
   static const String nome = '/nome';
 
   static const String newCofrinho = '/newCofrinho';
+  static const String objective = '/objective';
 }

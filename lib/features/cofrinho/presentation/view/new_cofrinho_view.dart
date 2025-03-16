@@ -1,7 +1,8 @@
-import 'package:cofrinho_app/main.dart';
+import 'package:cofrinho_app/app/routers/app_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:material_symbols_icons/symbols.dart';
 
 import '../../../../l10n/app_localizations.dart';
@@ -31,19 +32,6 @@ class NewCofrinhoViewState extends ConsumerState<NewCofrinhoView> {
     final viewModel = ref.watch(newCofrinhoViewModelProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bem vindo ao cofrinho'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.save),
-            onPressed: () async {
-              final sharedPreferencesService =
-                  ref.read(sharedPreferencesServiceProvider);
-              await sharedPreferencesService.setHasCompletedOnboarding(false);
-            },
-          ),
-        ],
-      ),
       body: Column(
         children: [
           Expanded(
@@ -96,7 +84,9 @@ class NewCofrinhoViewState extends ConsumerState<NewCofrinhoView> {
               height: AppSizes.buttonHeight,
               width: double.infinity,
               child: CustomFilledButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.push(AppRoutes.objective);
+                },
                 child: const Text(AppLocalizations.toStart),
               ),
             ),
@@ -119,9 +109,9 @@ class titleFeature extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        left: AppGaps.extraLarge,
+        left: AppGaps.large,
         top: AppGaps.large,
-        right: AppGaps.extraLarge,
+        right: AppGaps.large,
         bottom: AppGaps.large,
       ),
       child: Column(
@@ -169,7 +159,7 @@ class HeaderFeature extends StatelessWidget {
         ),
         Positioned(
           bottom: 32,
-          left: 24,
+          left: 16,
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -225,7 +215,9 @@ class HeaderFeature extends StatelessWidget {
             top: 8,
             left: 12,
             child: IconButton.filledTonal(
-              onPressed: () {},
+              onPressed: () {
+                context.pop(context);
+              },
               icon: Icon(Symbols.close_rounded,
                   color: Theme.of(context).colorScheme.onSurface),
             )),

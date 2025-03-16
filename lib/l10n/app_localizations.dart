@@ -25,4 +25,19 @@ class AppLocalizations {
   static const String howMuchToAddPerMonth = 'Quanto vamos adicionar por mês';
   static const String everythingReviewedLetsSave =
       'Tudo revisado? Partiu economizar';
+
+  // Objetivos
+  static const String objectiveCofrinho =
+      'Qual é o seu objetivo para esse cofrinho?';
+  static const String goalTravel = 'Viagem';
+  static const String goalCar = 'Carro';
+  static const String goalMotorcycle = 'Moto';
+  static const String goalPhone = 'Celular';
+  static const String goalHouse = 'Casa';
+  static const String goalCourse = 'Curso';
+  static const String goalRenovation = 'Reforma';
+  static const String goalMedical = 'Médico';
+  static const String goalGift = 'Presente';
+  static const String goalSaveMoney = 'Economizar';
+  static const String goalCongratulation = 'Comemoração';
 }
