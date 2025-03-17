@@ -127,7 +127,7 @@ class titleFeature extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: Text(
-              AppLocalizations.newCofrinhoMessage,
+              AppLocalizations.newPiggyBankMessage,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     color: Theme.of(context).colorScheme.onSurfaceVariant,
                   ),
@@ -227,7 +227,7 @@ class HeaderFeature extends StatelessWidget {
           bottom: 0,
           right: 0,
           child: SvgPicture.asset(
-            AppStringSvg.newCofrinhoIllustration,
+            AppStringSvg.newPiggyBankIllustration,
             width: AppSizes.illustrationLarge,
           ),
         ),

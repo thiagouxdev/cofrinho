@@ -21,9 +21,10 @@ class NomeViewModel extends ChangeNotifier {
     _state = NomeState.loading;
     notifyListeners();
     await _hiveService.putData(HiveService.userBoxName, 'name', name);
-    await _sharedPreferencesService.setHasCompletedOnboarding(true);
+    await _sharedPreferencesService.putString('userName', name);
+    await _sharedPreferencesService.putBool('hasCompletedOnboarding', true);
     if (context.mounted) {
-      context.go(AppRoutes.newCofrinho);
+      context.go(AppRoutes.newPiggyBank);
     }
     _state = NomeState.loaded;
     notifyListeners();

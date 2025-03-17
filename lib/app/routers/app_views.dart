@@ -26,7 +26,7 @@ final List<RouteBase> appRoutes = [
     builder: (context, state) => const NomeView(),
   ),
   GoRoute(
-    path: AppRoutes.newCofrinho,
+    path: AppRoutes.newPiggyBank,
     builder: (context, state) => const NewPiggyBankView(),
   ),
   GoRoute(

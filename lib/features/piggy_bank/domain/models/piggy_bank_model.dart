@@ -1,9 +1,9 @@
 import 'package:hive/hive.dart';
 
-part 'cofrinho_model.g.dart';
+part 'piggy_bank_model.g.dart';
 
 @HiveType(typeId: 0)
-class CofrinhoModel extends HiveObject {
+class PiggyBankModel extends HiveObject {
   @HiveField(0)
   final String name;
 
@@ -16,7 +16,7 @@ class CofrinhoModel extends HiveObject {
   @HiveField(3)
   final double monthlySaving;
 
-  CofrinhoModel({
+  PiggyBankModel({
     required this.name,
     required this.goal,
     this.initialAmount,

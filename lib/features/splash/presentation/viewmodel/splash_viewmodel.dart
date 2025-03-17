@@ -24,7 +24,7 @@ class SplashViewModel extends ChangeNotifier {
 
     if (context.mounted) {
       context.go(
-          hasCompletedOnboarding ? AppRoutes.newCofrinho : AppRoutes.welcome);
+          hasCompletedOnboarding ? AppRoutes.newPiggyBank : AppRoutes.welcome);
     }
     _state = SplashState.loaded;
     notifyListeners();

@@ -22,7 +22,7 @@ class SelectGoalView extends ConsumerWidget {
             slivers: [
               SliverAppBar.large(
                 title: Text(
-                  AppLocalizations.goalCofrinho,
+                  AppLocalizations.goalPiggyBank,
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 pinned: true,

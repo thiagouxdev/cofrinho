@@ -1,22 +1,22 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'cofrinho_model.dart';
+part of 'piggy_bank_model.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
-class CofrinhoModelAdapter extends TypeAdapter<CofrinhoModel> {
+class PiggyBankModelAdapter extends TypeAdapter<PiggyBankModel> {
   @override
   final int typeId = 0;
 
   @override
-  CofrinhoModel read(BinaryReader reader) {
+  PiggyBankModel read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return CofrinhoModel(
+    return PiggyBankModel(
       name: fields[0] as String,
       goal: fields[1] as String,
       initialAmount: fields[2] as double?,
@@ -25,7 +25,7 @@ class CofrinhoModelAdapter extends TypeAdapter<CofrinhoModel> {
   }
 
   @override
-  void write(BinaryWriter writer, CofrinhoModel obj) {
+  void write(BinaryWriter writer, PiggyBankModel obj) {
     writer
       ..writeByte(4)
       ..writeByte(0)
@@ -44,7 +44,7 @@ class CofrinhoModelAdapter extends TypeAdapter<CofrinhoModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is CofrinhoModelAdapter &&
+      other is PiggyBankModelAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
