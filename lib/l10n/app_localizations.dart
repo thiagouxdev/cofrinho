@@ -20,9 +20,9 @@ class AppLocalizations {
 
   // New Piggy Bank
   static const String newPiggyBankMessage =
-      'Vamos criar nosso mais novo piggy bank';
+      'Vamos criar nosso mais novo cofrinho';
   static const String selectYourGoal = 'Selecione seu objetivo';
-  static const String createYourPiggyBankName = 'Crie o nome do seu piggy bank';
+  static const String createYourPiggyBankName = 'Crie o nome do seu cofrinho';
   static const String enterTheValueToReach = 'Informe o valor para alcançar';
   static const String howMuchToAddPerMonth = 'Quanto vamos adicionar por mês';
   static const String everythingReviewedLetsSave =
@@ -30,7 +30,7 @@ class AppLocalizations {
 
   // Piggy Bank
   static const String goalPiggyBank =
-      'Qual é o seu objetivo para esse piggy bank?';
+      'Qual é o seu objetivo para esse cofrinho?';
   static const String goalTravel = 'Viagem';
   static const String goalCar = 'Carro';
   static const String goalMotorcycle = 'Moto';
@@ -48,7 +48,7 @@ class AppLocalizations {
   static const String emergency = 'Emergência';
   static const String retirement = 'Aposentadoria';
   static const String other = 'Outro';
-  static const String namePiggyBank = 'Crie um nome para seu piggy bank';
+  static const String namePiggyBank = 'Crie um nome para seu cofrinho';
   static const String valueToReach = 'Qual valor deseja alcançar?';
   static const String enterInitialAmount = 'Deseja adicionar um valor inicial?';
 
