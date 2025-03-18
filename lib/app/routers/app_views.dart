@@ -3,6 +3,7 @@ import 'package:piggy_bank_app/features/splash/presentation/view/splash_view.dar
 import 'package:piggy_bank_app/features/welcome/presentation/view/nome_view.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/piggy_bank/presentation/view/enter_name_view.dart';
 import '../../features/piggy_bank/presentation/view/select_goal_view.dart';
 import '../../features/home/presentation/view/home_view.dart';
 import '../../features/welcome/presentation/view/welcome_view.dart';
@@ -32,6 +33,10 @@ final List<RouteBase> appRoutes = [
   GoRoute(
     path: AppRoutes.objective,
     builder: (context, state) => const SelectGoalView(),
+  ),
+  GoRoute(
+    path: AppRoutes.enterName,
+    builder: (context, state) => const EnterNameView(),
   ),
 ];
 

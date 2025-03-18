@@ -6,4 +6,5 @@ class AppRoutes {
 
   static const String newPiggyBank = '/newPiggyBank';
   static const String objective = '/objective';
+  static const String enterName = '/enterName';
 }
