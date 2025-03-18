@@ -88,7 +88,7 @@ class SelectGoalView extends ConsumerWidget {
                 width: double.infinity,
                 child: CustomFilledButton(
                   onPressed: viewModel.isGoalSelected
-                      ? viewModel.continueProcess
+                      ? () => viewModel.continueProcess(context)
                       : null,
                   child: const Text(AppLocalizations.continueProcess),
                 ),
