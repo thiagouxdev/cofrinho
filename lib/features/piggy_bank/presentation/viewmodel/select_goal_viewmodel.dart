@@ -1,6 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:hive/hive.dart';
 import 'package:material_symbols_icons/symbols.dart';
 import 'package:piggy_bank_app/l10n/app_localizations.dart';
+
+import '../../../../app/routers/app_routers.dart';
+import '../../../../shared/services/hive_service.dart';
 
 final selectGoalViewModelProvider = Provider((ref) => SelectGoalViewModel(ref));
 final selectedGoalProvider = StateProvider<int?>((ref) => null);
@@ -55,7 +61,9 @@ class SelectGoalViewModel {
         },
       ];
 
-  void continueProcess() {
-    // Lógica para continuar o processo
+  void continueProcess(BuildContext context) async {
+    if (isGoalSelected) {
+      context.go(AppRoutes.enterName);
+    }
   }
 }
