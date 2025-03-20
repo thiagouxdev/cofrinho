@@ -17,25 +17,37 @@ class PiggyBankModelAdapter extends TypeAdapter<PiggyBankModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return PiggyBankModel(
-      name: fields[0] as String,
-      goal: fields[1] as String,
-      initialAmount: fields[2] as double?,
-      monthlySaving: fields[3] as double,
+      id: fields[0] as String,
+      name: fields[1] as String,
+      goal: fields[2] as String,
+      goalAmount: fields[3] as double,
+      initialAmount: fields[4] as double,
+      monthlyContribution: fields[5] as double,
+      creationDate: fields[6] as DateTime,
+      currentAmount: fields[7] as double,
     );
   }
 
   @override
   void write(BinaryWriter writer, PiggyBankModel obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(8)
       ..writeByte(0)
-      ..write(obj.name)
+      ..write(obj.id)
       ..writeByte(1)
-      ..write(obj.goal)
+      ..write(obj.name)
       ..writeByte(2)
-      ..write(obj.initialAmount)
+      ..write(obj.goal)
       ..writeByte(3)
-      ..write(obj.monthlySaving);
+      ..write(obj.goalAmount)
+      ..writeByte(4)
+      ..write(obj.initialAmount)
+      ..writeByte(5)
+      ..write(obj.monthlyContribution)
+      ..writeByte(6)
+      ..write(obj.creationDate)
+      ..writeByte(7)
+      ..write(obj.currentAmount);
   }
 
   @override
